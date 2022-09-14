@@ -1,0 +1,50 @@
+$containerBorder: 3px solid #f1f1f1;
+$fillColor: #3f51b5;
+
+
+.loginContainer {
+  padding: 16px;
+  border: $containerBorder;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+.labelName {
+  font-weight: bold;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: $fillColor;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.9;
+}
+
+/* The "Forgot password" text */
+span {
+  .psw {
+    float: right;
+    padding-top: 16px;
+  }
+}
+
+.psw {
+  display: block;
+  text-align: right;
+}
