@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 import { AppComponent } from './app.component';
 import { ImagesComponent } from './images/images.component';
@@ -9,6 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ImagePipe} from "./customPipes/ImagePipe";
+import {ImageUploadComponent} from "./ImageUpload/imageUpload.component";
+import {SearchPipe} from "./customPipes/SearchPipe";
 
 @NgModule({
   declarations: [
@@ -17,12 +22,17 @@ import { RegisterComponent } from './register/register.component';
     ImageDetailComponent,
     NavBarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ImagePipe,
+    ImageUploadComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 <div class="nav">
   <a class="home" routerLink="/images">Home</a>
-  <input placeholder="search" />
-  <a class="login" routerLink="/login">Login</a>
+  <a *ngIf="isLoggedIn.value" class="upload" routerLink="/upload">Upload</a>
+  <a *ngIf="!isLoggedIn.value" class="login" routerLink="/login">Login</a>
+  <a *ngIf="isLoggedIn.value" class="login" (click)="logout()">Logout</a>
 </div>

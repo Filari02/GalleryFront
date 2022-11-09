@@ -1,24 +1,28 @@
 @import "src/styles/styles.scss";
 
 .nav {
-  position: sticky;
-  top: 0;
   width: 100%;
   background-color: $fillColor;
   display: flex;
   align-items: center;
-  height: 56px;
+  height: 64px;
   font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
 }
 
-input {
-  margin: auto;
-  display: block;
-  width: 30%;
+.login, .home, .upload {
+  color: white;
 }
 
-.login, .home {
+.home {
   margin-left: 20px;
+}
+
+.login {
+  margin-left: auto;
   margin-right: 20px;
-  color: white;
+  float: right;
+}
+
+.upload {
+  margin-left: 5%;
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../services/authService";
+import {UserRegisterView} from "../models/userRegisterView";
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  form: any = {
+    name: null,
+    email: null,
+    password: null,
+    password2: null,
+  };
 
-  ngOnInit(): void {
+  isSuccessful = false;
+  errorMessage = '';
+
+
+  constructor(private authService: AuthService) { }
+
+  ngOnInit(): void {}
+
+
+  onSubmit(): void {
+    if (this.form.password != this.form.password2) {
+      this.errorMessage = "passwords must match"
+    }
+
+    let user: UserRegisterView = {
+      name: this.form.name,
+      email: this.form.email,
+      password: this.form.password,
+    };
+
+
+    this.authService.register(user).subscribe({
+      next: data => {
+        console.log(data);
+        this.isSuccessful = true;
+        this.errorMessage = "";
+      },
+      error: err => {
+        this.errorMessage = err.error.message;
+      }
+    });
   }
-
 }

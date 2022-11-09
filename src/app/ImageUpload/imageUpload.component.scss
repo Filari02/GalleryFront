@@ -1,0 +1,58 @@
+@import "/src/styles/styles.scss";
+
+img {
+  max-width: 1024px;
+  max-height: 1024px;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.addTagBtn {
+  height: 50px;
+  width: 128px;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.uploadInput {
+  width: 512px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  display: block;
+}
+
+.uploadTagInput {
+  @extend .uploadInput;
+  width: 384px;
+  display: inline-block;
+}
+
+.tags {
+  margin-right: 8px;
+}
+
+.tagLabel {
+  @extend .labelName;
+  display: block;
+}
+
+.newTagInput {
+  @extend .uploadInput;
+  display: inline-block;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+
+
+
+
+

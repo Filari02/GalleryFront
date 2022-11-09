@@ -1,3 +1,26 @@
-<div>
-  <div>{{image.name}}</div>
+<div class="imageContainer">
+<img class="image" alt="IMAGE" [src]="image.file | ImagePipe: image.fileType"/>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>{{image.name}}</td>
+    </tr>
+    <tr>
+      <td>Tags</td>
+      <td> {{image.tags.join(', ')}} </td>
+    </tr>
+    <tr>
+      <td>User</td>
+      <td>{{image.username}}</td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>{{image.uploadDate | date}}</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>{{image.description}}</td>
+    </tr>
+  </table>
+<button *ngIf="isAdmin" (click)="deleteImage()"> DELETE </button>
 </div>

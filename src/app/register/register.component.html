@@ -1,17 +1,19 @@
-<form>
+<form (ngSubmit)="onSubmit()">
   <div class="loginContainer">
     <label class="labelName">Email</label>
-    <input type="text" placeholder="Enter email" name="email" required>
+    <input class="loginInput" type="text" placeholder="Enter email" name="email" [(ngModel)]="form.email" required>
 
     <label class="labelName">Name</label>
-    <input type="text" placeholder="Enter name" name="name" required>
+    <input class="loginInput" type="text" placeholder="Enter name" name="name" [(ngModel)]="form.name" required>
 
     <label class="labelName">Password</label>
-    <input type="password" placeholder="Enter password" name="psw" required>
+    <input class="loginInput" type="password" placeholder="Enter password" name="psw" [(ngModel)]="form.password" required>
 
     <label class="labelName">Repeat password</label>
-    <input type="password" placeholder="Repeat password" name="psw2" required>
+    <input class="loginInput" type="password" placeholder="Repeat password" name="psw2" [(ngModel)]="form.password2" required>
 
+    <label>{{errorMessage}}</label>
+    <label *ngIf="isSuccessful"> Registration was successful </label>
     <button type="submit">Register</button>
   </div>
 </form>

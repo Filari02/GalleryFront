@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {StorageService} from "./services/storageService";
+import {AuthService} from "./services/authService";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'GalleryFront';
+  title = 'GalleryFront'
+
+
 }

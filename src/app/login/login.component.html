@@ -1,18 +1,11 @@
-<form >
+<form (ngSubmit)="onSubmit()">
 
   <div class="loginContainer">
     <label class="labelName">Email</label>
-    <input type="text" placeholder="Enter email" name="email" required>
+    <input class="loginInput" type="text" placeholder="Enter email" name="email" [(ngModel)]="form.email" required>
 
     <label class="labelName">Password</label>
-    <input type="password" placeholder="Enter password" name="psw" required>
-
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-    <label>
-    <a routerLink="/images" class="psw">Forgot password?</a>
-    </label>
+    <input class="loginInput" type="password" placeholder="Enter password" name="psw" [(ngModel)]="form.password" required>
     <button type="submit">Login</button>
 
     <label class="labelName">

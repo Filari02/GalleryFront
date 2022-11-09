@@ -1,8 +1,62 @@
 @import "src/styles/styles.scss";
 
 .imageContainer {
-  padding: 16px;
   border: $containerBorder;
-  margin-right: 5%;
-  margin-left: 5%;
+  height: 300px;
+  width: 300px;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  margin: auto;
 }
+
+.imageThumbnail {
+  display: block;
+}
+
+.imageName {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.imageBox {
+  height: 150px;
+}
+
+img {
+  padding-top: 5%;
+  margin: auto;
+  display: block;
+}
+
+.tags {
+  text-align: center;
+}
+
+.line {
+  height: 1px;
+  margin-top: 5%;
+  background: $containerColor;
+}
+
+.tag {
+  border: 1px solid $fillColor;
+  margin-left: 10px;
+}
+
+button {
+  @extend button;
+  width: 128px;
+  margin-left: 8px;
+}
+
+.searchTags {
+  margin-left: 8px;
+}
+
+.searchInput {
+  margin-left: 3%;
+}
+

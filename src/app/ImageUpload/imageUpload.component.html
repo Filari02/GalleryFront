@@ -1,0 +1,30 @@
+<form class="upload" (ngSubmit)="submit()">
+
+  <label class="tagLabel">File</label>
+  <img [src]="imageSrc" *ngIf="imageSrc">
+  <input class="uploadInput" type="file" (change)="onFileChange($event)">
+
+    <label class="labelName">Name</label>
+    <input class="uploadInput" type="text" placeholder="Enter image name" name="name" [(ngModel)]="form.name" required>
+
+
+    <label class="labelName">Description</label>
+    <textarea class="uploadInput" placeholder="Enter description" name="name" [(ngModel)]="form.description" required> </textarea>
+
+    <label class="tagLabel">Tags</label>
+    <label class="tags" *ngFor="let tag of tags">
+      <input type="checkbox" (change)="onCheck(tag)">
+      {{tag}}
+    </label>
+
+
+    <form (ngSubmit)="addTag()">
+      <label class="tagLabel">Add new tag</label>
+      <input class="uploadTagInput" type="text" placeholder="Enter tag name" name="name" [(ngModel)]="newTag">
+      <button type="submit" class="addTagBtn">ADD</button>
+    </form>
+
+
+
+  <button type="submit">Upload Image</button>
+</form>
